@@ -4533,6 +4533,8 @@ const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting
 document.querySelectorAll('.lesson').forEach(s => io.observe(s));
 
 
+function resetDefaultRate(){ $('rate').value='1'; A.playbackRate=1; }
+resetDefaultRate(); window.addEventListener('pageshow',resetDefaultRate);
 const main=document.querySelector('main');
 $('chapter').onchange=()=>$( $('chapter').value ).scrollIntoView({block:'start'});
 document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();$(a.hash.slice(1)).scrollIntoView({block:'start'});$('chapter').value=a.hash.slice(1);}));
