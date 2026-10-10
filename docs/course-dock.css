@@ -2,20 +2,19 @@
 html{height:100%;overflow:hidden}
 body{height:100dvh;min-height:0;overflow:hidden;display:grid;grid-template-rows:auto minmax(0,1fr) auto;padding:0;margin:0}
 .lesson-toolbar{min-width:0}
-.app{display:grid;grid-template-columns:minmax(0,1fr);min-width:0;min-height:0;overflow:hidden}
-.app:has(.mouth.show){grid-template-columns:minmax(0,1fr) 320px}
-main{min-width:0;min-height:0;overflow:auto;padding:0;scroll-padding:16px}
-.mouth-dock{display:none;min-width:0;min-height:0;overflow:auto;background:#f6f7f9;border-left:1px solid #e5e7eb}
-.mouth-dock:has(.mouth.show){display:block}
-.mouth{position:static;inset:auto;width:100%;max-width:100%;margin:0;border:0;border-radius:0;box-shadow:none;z-index:auto;overflow-wrap:anywhere}
+.app{display:grid;grid-template-columns:minmax(0,1fr) 320px;min-width:0;min-height:0;overflow:hidden}
+main{min-width:0;min-height:0;overflow:auto;scrollbar-gutter:stable;padding:0;scroll-padding:16px}
+.mouth-dock{display:block;min-width:0;min-height:0;overflow:auto;scrollbar-gutter:stable;background:#f6f7f9;border-left:1px solid #e5e7eb}
+.mouth{display:block;position:static;inset:auto;width:100%;max-width:100%;margin:0;border:0;border-radius:0;box-shadow:none;z-index:auto;overflow-wrap:anywhere}
 .mouth .mh>span{min-width:0}
 .mouth .mh button{flex-shrink:0}
 .mouth .row2{flex-wrap:wrap}
+.mouth button:disabled{opacity:.45;cursor:default}
 .player{position:static!important;inset:auto!important;width:auto;min-width:0;z-index:auto}
 .player>*{min-width:0}
 #now{overflow-wrap:anywhere}
 @media(max-width:900px){
-  .app:has(.mouth.show){grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(0,1fr) minmax(0,min(250px,45%))}
+  .app{grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(0,1fr) minmax(0,min(250px,45%))}
   .mouth-dock{border-left:0;border-top:1px solid #e5e7eb}
   .mouth{padding:8px 12px}
   .mouth .views{max-width:320px;margin:4px auto 0}

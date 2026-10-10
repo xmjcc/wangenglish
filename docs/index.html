@@ -4543,4 +4543,4 @@ document.querySelectorAll('.lesson').forEach(lesson=>{const button=document.crea
 new MutationObserver(()=>{$('mPhs').querySelectorAll('span').forEach(sp=>{sp.tabIndex=0;sp.setAttribute('role','button');});}).observe($('mPhs'),{childList:true});
 $('mPhs').addEventListener('keydown',e=>{if((e.code==='Enter'||e.code==='Space')&&e.target.matches('span')){e.preventDefault();e.target.click();}});
 showErr=()=>{$('now').textContent='音频暂时无法播放，请刷新后重试。';};A.addEventListener('error',showErr);
-</script></body></html>
+</script><script src="course-mouth-dock.js"></script></body></html>
